@@ -52,7 +52,6 @@ const SearchBar = ({ setDisplaySynonyms, setSearchTerm }) => {
           className="absolute right-1 top-1/2 -translate-y-1/2 md:w-32 py-4 md:py-3 px-4 bg-blue-600 rounded-full text-white transform transition duration-500 hover:bg-blue-700"
         >
           <div className="flex items-center">
-            <span className=""></span>
             <AiOutlineSearch />
             <span className="ml-3 text-md hidden md:block">Search</span>
           </div>

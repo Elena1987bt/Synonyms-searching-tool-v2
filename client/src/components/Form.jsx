@@ -44,6 +44,7 @@ const Form = () => {
   /*    Function to remove synonym from array */
   const handleRemoveSynonym = (synonym) => {
     setSynonyms((prevSynonyms) => prevSynonyms.filter((t) => t !== synonym));
+
     if (synonyms.length === 1) {
       inputRef.current.focus();
     }
@@ -110,6 +111,7 @@ const Form = () => {
         word={word}
         userInput={userInput}
         setUserInput={setUserInput}
+        setInputError={setInputError}
       />
       <button
         onClick={(e) => handleSubmit(e)}
@@ -118,18 +120,20 @@ const Form = () => {
         Submit
       </button>
       {createdWord && (
-        <h1
-          className="my-10  text-center   tracking-tight leading-2 text-green-900 text-md lg:text-xl
-        "
-        >
+        <h1 className="my-6  text-center tracking-tight leading-2 text-green-900 text-md lg:text-xl">
           Success!
           <br />
           <p className="mt-2 text-3xl">👏👏👏</p>
         </h1>
       )}
       {inputError && <p className="text-red-200 mt-10">* {inputError}</p>}
-      {error && <p className="text-red-200 mt-10">* {error}</p>}
-      {isLoading && <Loader />}
+      {error && <p className="text-red-200 mt-10 ">* {error}</p>}
+
+      {isLoading && (
+        <div className="mx-auto mt-6">
+          <Loader />
+        </div>
+      )}
     </form>
   );
 };

@@ -7,6 +7,7 @@ const SynonymField = ({
   word,
   userInput,
   setUserInput,
+  setInputError,
 }) => {
   /* Handle input onChange */
   const handleInputChange = (e) => {
@@ -21,9 +22,12 @@ const SynonymField = ({
   };
   const handleAddSynonym = (e) => {
     e.preventDefault(); /* Prevent form submission or new line creation */
+    if (userInput.length > 20) {
+      setInputError("Synonym can not be longer than 30 characters!");
+    }
     if (
       userInput.trim() !== "" &&
-      userInput.length <= 20 &&
+      userInput.length <= 30 &&
       synonyms.length < maxSynonyms
     ) {
       addSynonym(userInput);
