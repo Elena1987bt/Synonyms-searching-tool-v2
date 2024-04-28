@@ -14,7 +14,7 @@ const SearchBar = ({ setDisplaySynonyms, setSearchTerm }) => {
         type: "reset",
       });
     }
-    setSearchInput(e.target.value.trim());
+    setSearchInput(e.target.value);
   };
 
   /*  handle Enter key press */

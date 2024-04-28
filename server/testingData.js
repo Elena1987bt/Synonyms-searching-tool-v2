@@ -1,5 +1,13 @@
 const words = [
   {
+    word: "like",
+    synonyms: ["love", "enjoy"],
+  },
+  {
+    word: "appreciate",
+    synonyms: ["love", "keen on"],
+  },
+  {
     word: "happy",
     synonyms: [
       "cheerful",
