@@ -1,3 +1,4 @@
+/* Manage fetching data logic using useReducer and Context API */
 import { createContext, useContext, useReducer } from "react";
 const AppContext = createContext();
 
