@@ -43,7 +43,7 @@ const SynonymField = ({
           type="text"
           placeholder={
             synonyms?.length < maxSynonyms
-              ? "Add a tag"
+              ? "Add a synonym"
               : `You can only enter max. of ${maxSynonyms} synonyms`
           }
           className={`w-full border border-gray-300  px-4 py-3 ${
